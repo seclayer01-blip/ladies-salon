@@ -4,35 +4,38 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Style N Sumit Unisex Salon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family:Georgia, serif;
-background:#f5f3ef;
-color:#222;
+font-family:'Playfair Display',serif;
+background:#F2EFEA;
+color:#2c2c2c;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
+background:white;
 display:flex;
 justify-content:center;
 gap:40px;
 padding:20px;
-background:white;
 letter-spacing:2px;
+font-size:14px;
 }
 
 /* HERO */
 
 .hero{
 height:500px;
-background:url(hero.jpg) center/cover;
+background:url("facial.jpg") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -41,65 +44,71 @@ justify-content:center;
 .hero h1{
 font-size:70px;
 letter-spacing:6px;
+color:#222;
+background:rgba(255,255,255,0.6);
+padding:20px 40px;
 }
 
 /* ABOUT */
 
 .about{
 display:flex;
-padding:80px;
-gap:50px;
 align-items:center;
+gap:60px;
+padding:80px;
+background:#F2EFEA;
 }
 
 .about img{
 width:400px;
+border-radius:10px;
 }
 
-/* SERVICES */
+/* SERVICES TITLE */
 
 .services-title{
-background:#0e1a18;
+background:#0F1F1B;
 color:white;
 text-align:center;
 padding:70px;
+font-size:30px;
+letter-spacing:3px;
 }
+
+/* SERVICE */
 
 .service{
 display:flex;
-gap:40px;
-padding:60px;
 align-items:center;
+gap:40px;
+padding:70px;
 }
 
 .service img{
 width:300px;
-}
-
-.service h2{
-font-size:40px;
+border-radius:10px;
 }
 
 .price div{
 display:flex;
 justify-content:space-between;
 border-bottom:1px solid #ccc;
-padding:5px 0;
+padding:8px 0;
 }
 
 /* BOOKING */
 
 .booking{
 display:flex;
-gap:40px;
-padding:60px;
-background:#f5f3ef;
+gap:60px;
+padding:80px;
+background:#F2EFEA;
 }
 
 .booking input{
 padding:10px;
-margin-top:10px;
 width:200px;
+margin-top:10px;
 }
 
 .times{
@@ -110,26 +119,28 @@ margin-top:20px;
 }
 
 .times button{
-padding:8px;
-border:1px solid #ccc;
+padding:10px;
 background:white;
+border:1px solid #ccc;
+cursor:pointer;
 }
 
 .book-btn{
 margin-top:20px;
-padding:12px 25px;
-background:#222;
+padding:12px 30px;
+background:black;
 color:white;
 border:none;
+cursor:pointer;
 }
 
 /* FOOTER */
 
 footer{
-padding:60px;
 background:#eee;
 display:flex;
-justify-content:space-between;
+justify-content:space-around;
+padding:60px;
 }
 
 </style>
@@ -148,9 +159,7 @@ BOOK
 </nav>
 
 <div class="hero">
-
 <h1>BEAUTY SALON</h1>
-
 </div>
 
 <section class="about">
@@ -160,44 +169,42 @@ BOOK
 <h2>Some Words About Main Task</h2>
 
 <p>
-Modern luxury salon experience with professional services.
+Modern luxury salon experience with professional services and beauty treatments.
 </p>
 
 </div>
 
-<img src="tools.jpg">
+<img src="haircut1.jpg">
 
 </section>
 
 <div class="services-title">
-
-<h1>SERVICES & PRICING</h1>
-
+SERVICES & PRICING
 </div>
 
 <div class="service">
 
-<img src="service1.jpg">
+<img src="haircut2.jpg">
 
 <div>
 
-<h2>COLOR</h2>
+<h2>Hair Cut</h2>
 
 <div class="price">
 
 <div>
-<span>All-over color</span>
-<span>₹120</span>
+<span>Men Hair Cut</span>
+<span>₹100</span>
 </div>
 
 <div>
-<span>Root touch up</span>
-<span>₹95</span>
+<span>Stylish Cut</span>
+<span>₹150</span>
 </div>
 
 <div>
-<span>Full highlights</span>
-<span>₹200</span>
+<span>Beard Trim</span>
+<span>₹50</span>
 </div>
 
 </div>
@@ -213,7 +220,7 @@ Modern luxury salon experience with professional services.
 <h2>Make an appointment online</h2>
 
 <label>Name</label><br>
-<input type="text"><br>
+<input type="text" placeholder="Your Name"><br>
 
 <label>Select Date</label><br>
 <input type="date">
@@ -240,26 +247,19 @@ Book an appointment
 <footer>
 
 <div>
-
 <h3>Follow us</h3>
-
 Instagram<br>
 YouTube<br>
 TikTok
-
 </div>
 
 <div>
-
 <h3>Opening Hours</h3>
-
 Monday - Friday<br>
 10:00 - 19:00
-
 </div>
 
 </footer>
 
 </body>
-
 </html>
