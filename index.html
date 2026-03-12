@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Style N Sumit Unisex Salon</title>
 
 <style>
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: #111;
+  font-family: Georgia, serif;
+  background: #f2efeb;
+  color: #2c2c2c;
   text-align: center;
 }
 
 header {
-  background: black;
-  color: white;
-  padding: 20px;
+  padding: 30px;
+}
+
+header h1 {
+  font-size: 40px;
+  letter-spacing: 3px;
 }
 
 .hero img {
   width: 100%;
-  max-height: 350px;
+  max-height: 420px;
   object-fit: cover;
 }
 
 section {
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .services {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .card {
-  background: #f1f1f1;
-  padding: 15px;
+  background: white;
+  padding: 20px;
   border-radius: 10px;
   width: 260px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
 }
 
 .offer {
-  background: gold;
-  padding: 15px;
+  background: #dcc89c;
+  padding: 20px;
+  margin: 30px;
   border-radius: 10px;
-  margin: 20px;
   font-weight: bold;
 }
 
@@ -63,41 +75,150 @@ input, button {
 }
 
 button {
-  background: gold;
+  background: #dcc89c;
   border: none;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .gallery img {
   width: 90%;
   max-width: 400px;
+  margin: 10px;
   border-radius: 10px;
-  margin: 10px 0;
 }
 
 footer {
-  background: black;
-  color: white;
-  padding: 15px;
-  margin-top: 20px;
+  background: #eae6df;
+  padding: 25px;
+  margin-top: 30px;
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>Style N Sumit Unisex Salon</h1>
-  <p>Open: 9:00 AM – 9:00 PM</p>
+<h1>Style N Sumit Unisex Salon</h1>
+<p>Open: 9:00 AM – 9:00 PM</p>
 </header>
 
 <div class="hero">
-  <img src="426699757_405513295481184_1448517298834230125_n.webp.jpg">
+<img src="65e9d8bc50c98f9227be8bb8b9d5dadd.jpg">
 </div>
 
 <section>
-  <h2>Services</h2>
-  <div class="services">
 
-    
+<h2>Services</h2>
+
+<div class="services">
+
+<div class="card">
+<img src="427506271_1052622869153046_2140385892206602579_n.webp.jpg">
+<h3>Hair Cut (Men)</h3>
+<p>Normal cut – ₹100</p>
+<p>Stylish cut – ₹150</p>
+<p>Beard trim – ₹50</p>
+</div>
+
+<div class="card">
+<img src="65e9d8bc50c98f9227be8bb8b9d5dadd.jpg">
+<h3>Hair Cut (Women)</h3>
+<p>Basic cut – ₹350</p>
+<p>Layer cut – ₹500</p>
+<p>Straight cut – ₹150</p>
+</div>
+
+<div class="card">
+<img src="427506271_1052622869153046_2140385892206602579_n.webp.jpg">
+<h3>Facial</h3>
+<p>Normal facial – ₹700</p>
+<p>Gold facial – ₹1000</p>
+<p>Diamond facial – ₹1200</p>
+</div>
+
+<div class="card">
+<img src="65e9d8bc50c98f9227be8bb8b9d5dadd.jpg">
+<h3>Hair Spa</h3>
+<p>Basic spa – ₹500</p>
+<p>Keratin spa – ₹700</p>
+<p>Anti-dandruff spa – ₹1200</p>
+</div>
+
+</div>
+
+</section>
+
+<div class="offer">
+Hair Week Package – ₹8000<br>
+Special Hair Service – ₹999
+</div>
+
+<section>
+
+<h2>Book Appointment</h2>
+
+<input type="text" id="name" placeholder="Your Name"><br>
+<input type="date" id="date"><br>
+<input type="time" id="time"><br>
+
+<button onclick="sendWhatsApp()">Book on WhatsApp</button>
+
+</section>
+
+<section>
+
+<h2>Contact</h2>
+
+<p>Sawai Madhopur City Center Mall</p>
+<p>Lucky: 94621 20750</p>
+<p>Sumit: 75974 77986</p>
+
+</section>
+
+<section class="gallery">
+
+<h2>Gallery</h2>
+
+<img src="65e9d8bc50c98f9227be8bb8b9d5dadd.jpg">
+<img src="427506271_1052622869153046_2140385892206602579_n.webp.jpg">
+
+</section>
+
+<footer>
+
+© 2026 Style N Sumit Unisex Salon
+
+</footer>
+
+<script>
+
+function sendWhatsApp() {
+
+var name = document.getElementById("name").value;
+var date = document.getElementById("date").value;
+var time = document.getElementById("time").value;
+
+if(name === "" || date === "" || time === "") {
+alert("Please complete all 3 steps first");
+return;
+}
+
+var message =
+"New Salon Booking:%0A" +
+"Name: " + name + "%0A" +
+"Date: " + date + "%0A" +
+"Time: " + time;
+
+var phone = "9462120750";
+var url = "https://wa.me/" + phone + "?text=" + message;
+
+window.open(url, "_blank");
+
+}
+
+</script>
+
+</body>
+</html>
