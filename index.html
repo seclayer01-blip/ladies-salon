@@ -1,96 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Style N Sumit Unisex Salon</title>
 
 <style>
 
-body {
-  margin: 0;
-  font-family: Georgia, serif;
-  background: #f2efeb;
-  color: #2c2c2c;
-  text-align: center;
+body{
+margin:0;
+font-family:Georgia, serif;
+background:#f5f3ef;
+color:#222;
 }
 
-header {
-  padding: 30px;
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+background:white;
+letter-spacing:2px;
 }
 
-header h1 {
-  font-size: 40px;
-  letter-spacing: 3px;
+/* HERO */
+
+.hero{
+height:500px;
+background:url(hero.jpg) center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.hero img {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
+.hero h1{
+font-size:70px;
+letter-spacing:6px;
 }
 
-section {
-  padding: 40px 20px;
+/* ABOUT */
+
+.about{
+display:flex;
+padding:80px;
+gap:50px;
+align-items:center;
 }
 
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.about img{
+width:400px;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 260px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* SERVICES */
+
+.services-title{
+background:#0e1a18;
+color:white;
+text-align:center;
+padding:70px;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 8px;
+.service{
+display:flex;
+gap:40px;
+padding:60px;
+align-items:center;
 }
 
-.offer {
-  background: #dcc89c;
-  padding: 20px;
-  margin: 30px;
-  border-radius: 10px;
-  font-weight: bold;
+.service img{
+width:300px;
 }
 
-input, button {
-  padding: 12px;
-  width: 80%;
-  max-width: 300px;
-  margin: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+.service h2{
+font-size:40px;
 }
 
-button {
-  background: #dcc89c;
-  border: none;
-  cursor: pointer;
+.price div{
+display:flex;
+justify-content:space-between;
+border-bottom:1px solid #ccc;
+padding:5px 0;
 }
 
-.gallery img {
-  width: 90%;
-  max-width: 400px;
-  margin: 10px;
-  border-radius: 10px;
+/* BOOKING */
+
+.booking{
+display:flex;
+gap:40px;
+padding:60px;
+background:#f5f3ef;
 }
 
-footer {
-  background: #eae6df;
-  padding: 25px;
-  margin-top: 30px;
+.booking input{
+padding:10px;
+margin-top:10px;
+width:200px;
+}
+
+.times{
+display:grid;
+grid-template-columns:repeat(2,80px);
+gap:10px;
+margin-top:20px;
+}
+
+.times button{
+padding:8px;
+border:1px solid #ccc;
+background:white;
+}
+
+.book-btn{
+margin-top:20px;
+padding:12px 25px;
+background:#222;
+color:white;
+border:none;
+}
+
+/* FOOTER */
+
+footer{
+padding:60px;
+background:#eee;
+display:flex;
+justify-content:space-between;
 }
 
 </style>
@@ -99,126 +138,128 @@ footer {
 
 <body>
 
-<header>
-<h1>Style N Sumit Unisex Salon</h1>
-<p>Open: 9:00 AM – 9:00 PM</p>
-</header>
+<nav>
+HOME
+ABOUT
+SERVICES
+GALLERY
+CONTACT
+BOOK
+</nav>
 
 <div class="hero">
-<img src="65e9d8bc50c98f9227be8bb8b9d5dadd.jpg">
-</div>
 
-<section>
-
-<h2>Services</h2>
-
-<div class="services">
-
-<div class="card">
-<img src="427506271_1052622869153046_2140385892206602579_n.webp.jpg">
-<h3>Hair Cut (Men)</h3>
-<p>Normal cut – ₹100</p>
-<p>Stylish cut – ₹150</p>
-<p>Beard trim – ₹50</p>
-</div>
-
-<div class="card">
-<img src="65e9d8bc50c98f9227be8bb8b9d5dadd.jpg">
-<h3>Hair Cut (Women)</h3>
-<p>Basic cut – ₹350</p>
-<p>Layer cut – ₹500</p>
-<p>Straight cut – ₹150</p>
-</div>
-
-<div class="card">
-<img src="427506271_1052622869153046_2140385892206602579_n.webp.jpg">
-<h3>Facial</h3>
-<p>Normal facial – ₹700</p>
-<p>Gold facial – ₹1000</p>
-<p>Diamond facial – ₹1200</p>
-</div>
-
-<div class="card">
-<img src="65e9d8bc50c98f9227be8bb8b9d5dadd.jpg">
-<h3>Hair Spa</h3>
-<p>Basic spa – ₹500</p>
-<p>Keratin spa – ₹700</p>
-<p>Anti-dandruff spa – ₹1200</p>
-</div>
+<h1>BEAUTY SALON</h1>
 
 </div>
+
+<section class="about">
+
+<div>
+
+<h2>Some Words About Main Task</h2>
+
+<p>
+Modern luxury salon experience with professional services.
+</p>
+
+</div>
+
+<img src="tools.jpg">
 
 </section>
 
-<div class="offer">
-Hair Week Package – ₹8000<br>
-Special Hair Service – ₹999
+<div class="services-title">
+
+<h1>SERVICES & PRICING</h1>
+
 </div>
 
-<section>
+<div class="service">
 
-<h2>Book Appointment</h2>
+<img src="service1.jpg">
 
-<input type="text" id="name" placeholder="Your Name"><br>
-<input type="date" id="date"><br>
-<input type="time" id="time"><br>
+<div>
 
-<button onclick="sendWhatsApp()">Book on WhatsApp</button>
+<h2>COLOR</h2>
 
-</section>
+<div class="price">
 
-<section>
+<div>
+<span>All-over color</span>
+<span>₹120</span>
+</div>
 
-<h2>Contact</h2>
+<div>
+<span>Root touch up</span>
+<span>₹95</span>
+</div>
 
-<p>Sawai Madhopur City Center Mall</p>
-<p>Lucky: 94621 20750</p>
-<p>Sumit: 75974 77986</p>
+<div>
+<span>Full highlights</span>
+<span>₹200</span>
+</div>
 
-</section>
+</div>
 
-<section class="gallery">
+</div>
 
-<h2>Gallery</h2>
+</div>
 
-<img src="65e9d8bc50c98f9227be8bb8b9d5dadd.jpg">
-<img src="427506271_1052622869153046_2140385892206602579_n.webp.jpg">
+<section class="booking">
+
+<div>
+
+<h2>Make an appointment online</h2>
+
+<label>Name</label><br>
+<input type="text"><br>
+
+<label>Select Date</label><br>
+<input type="date">
+
+<div class="times">
+
+<button>11:30</button>
+<button>12:00</button>
+<button>12:30</button>
+<button>13:00</button>
+<button>13:30</button>
+<button>14:00</button>
+
+</div>
+
+<button class="book-btn">
+Book an appointment
+</button>
+
+</div>
 
 </section>
 
 <footer>
 
-© 2026 Style N Sumit Unisex Salon
+<div>
+
+<h3>Follow us</h3>
+
+Instagram<br>
+YouTube<br>
+TikTok
+
+</div>
+
+<div>
+
+<h3>Opening Hours</h3>
+
+Monday - Friday<br>
+10:00 - 19:00
+
+</div>
 
 </footer>
 
-<script>
-
-function sendWhatsApp() {
-
-var name = document.getElementById("name").value;
-var date = document.getElementById("date").value;
-var time = document.getElementById("time").value;
-
-if(name === "" || date === "" || time === "") {
-alert("Please complete all 3 steps first");
-return;
-}
-
-var message =
-"New Salon Booking:%0A" +
-"Name: " + name + "%0A" +
-"Date: " + date + "%0A" +
-"Time: " + time;
-
-var phone = "9462120750";
-var url = "https://wa.me/" + phone + "?text=" + message;
-
-window.open(url, "_blank");
-
-}
-
-</script>
-
 </body>
+
 </html>
