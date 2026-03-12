@@ -3,111 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radiance Hair Co | Services & Pricing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>Recreated Design Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Montserrat', sans-serif; background-color: #fff; color: #1a1a1a; }
-        
-        /* Header */
-        header { padding: 30px; text-align: center; border-bottom: 1px solid #f0f0f0; background: white; position: sticky; top: 0; z-index: 100; }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 2rem; letter-spacing: 6px; text-transform: uppercase; }
+        /* CSS Reset for consistent cross-browser look */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        /* Hero */
-        .hero { background: #000; color: #fff; text-align: center; padding: 80px 20px; text-transform: uppercase; }
-        .hero p { font-size: 0.7rem; letter-spacing: 3px; margin-bottom: 10px; opacity: 0.8; }
-        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 400; letter-spacing: 4px; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-        /* Section Layout */
-        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-        .service-block { display: flex; flex-wrap: wrap; margin-bottom: 100px; gap: 40px; align-items: flex-start; }
-        .service-img { flex: 1; min-width: 300px; }
-        .service-img img { width: 100%; height: 450px; object-fit: cover; }
-        .service-info { flex: 1.2; min-width: 300px; }
-        
-        h2 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 400; margin-bottom: 15px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; }
-        
-        /* Table Style */
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th { text-align: left; font-size: 0.7rem; letter-spacing: 1px; padding-bottom: 10px; color: #777; font-weight: normal; }
-        .align-right { text-align: right; }
-        td { padding: 12px 0; border-bottom: 1px solid #eee; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
-        .price { text-align: right; font-weight: 500; }
+        /* --- Global Container --- */
+        .page-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
 
-        /* Button */
-        .book-btn { background: #000; color: #fff; border: none; padding: 12px 25px; margin-top: 25px; cursor: pointer; font-size: 0.75rem; letter-spacing: 2px; }
-        
-        @media (max-width: 768px) { .service-block { flex-direction: column; } h2 { font-size: 2.5rem; } }
+        /* --- Header Section --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            color: #000;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 20px;
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        /* --- Split Hero Section (White/Beige) --- */
+        .hero {
+            display: flex;
+            position: relative;
+            background-color: #fff; /* Base background is white */
+        }
+
+        /* Diagonal beige split overlay */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-color: #E6DDD3; /* Subtle beige/tan tone from image */
+            z-index: 0;
+        }
+
+        .hero-left, .hero-right {
+            flex: 1;
+            padding: 150px 50px 50px; /* Adjust padding for text and image placement */
+            z-index: 10;
+            position: relative;
+        }
+
+        /* 'DESIGN' large background text on the left */
+        .hero-left .bg-text {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            font-weight: bold;
+            color: #f7f7f7; /* Very light grey */
+            opacity: 0.8;
+            letter-spacing: 15px;
+            text-transform: uppercase;
+            writing-mode: vertical-lr; /* Vertically text flow like image */
+            transform: rotate(180deg);
+        }
+
+        .hero-date {
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            position: absolute;
+            left: 10px;
+            top: 250px;
+        }
+
+        .hero-content {
+            margin-top: 100px; /* Offset text from large background text */
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+        }
+
+        .hero-right img {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Place image in front of beige overlay */
+        }
+
+        .hero-right .small-text {
+            font-size: 0.75rem;
+            color: #666;
+            text-align: right;
+            position: absolute;
+            right: 20px;
+            top: 150px;
+        }
+
+        /* --- White 'Some Words About Main Task' Section --- */
+        .main-task {
+            background-color: #fff;
+            padding: 100px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-content {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .task-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #000;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .task-description {
+            font-size: 0.8rem;
+            color: #777;
+            max-width: 400px;
+        }
+
+        .task-images {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        .task-images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
 
-<header><div class="logo">RADIANCE</div></header>
+    <div class="page-wrapper">
+        
+        <header>
+            <div class="header-links">
+                <a href="#">Back</a>
+            </div>
+            <div class="header-brand">RADIANCE</div>
+            <div class="header-links">
+                <a href="#">Interface</a>
+                <a href="#">UI/UX Design</a>
+            </div>
+        </header>
 
-<div class="hero">
-    <p>RADIANCE HAIR CO</p>
-    <h1>SERVICES & PRICING</h1>
-</div>
+        <section class="hero">
+            <div class="hero-left">
+                <div class="bg-text">DESIGN</div>
+                <div class="hero-date">July 2018</div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Beauty<br>Salon</h1>
+                    <p class="hero-subtitle">Design Website</p>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img src="path/to/model-image.jpg" alt="Beautiful Model Image">
+                <div class="small-text">Designed by Max Mykhailov</div>
+            </div>
+        </section>
 
-<div class="container">
-
-    <div class="service-block">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80"></div>
-        <div class="service-info">
-            <h2>COLOR</h2>
-            <table>
-                <tr><th>Service</th><th class="align-right">Starting At</th></tr>
-                <tr><td>All-Over Color</td><td class="price">$120</td></tr>
-                <tr><td>Root Touch-Up / Regrowth</td><td class="price">$95</td></tr>
-                <tr><td>Full Highlights</td><td class="price">$210</td></tr>
-                <tr><td>Partial Highlights</td><td class="price">$160</td></tr>
-                <tr><td>Balayage</td><td class="price">$225</td></tr>
-            </table>
-            <button class="book-btn">BOOK NOW</button>
-        </div>
+        <section class="main-task">
+            <div class="task-content">
+                <h2 class="task-title">SOME WORDS ABOUT MAIN TASK</h2>
+                <p class="task-description">I tried to create a comfortable, modern, and beautiful design. Show the necessary information about the club and bring it to the target action.</p>
+            </div>
+            <div class="task-images">
+                <img src="path/to/salon-tools-image.jpg" alt="Salon Tools Image">
+            </div>
+        </section>
     </div>
-
-    <div class="service-block">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=600&q=80"></div>
-        <div class="service-info">
-            <h2>CUT</h2>
-            <table>
-                <tr><th>Service</th><th class="align-right">Starting At</th></tr>
-                <tr><td>Women's Cut</td><td class="price">$85</td></tr>
-                <tr><td>Men's Cut</td><td class="price">$40</td></tr>
-                <tr><td>Children's Cut (Under 12)</td><td class="price">$35</td></tr>
-            </table>
-            <button class="book-btn">BOOK NOW</button>
-        </div>
-    </div>
-
-    <div class="service-block">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=600&q=80"></div>
-        <div class="service-info">
-            <h2>STYLE</h2>
-            <table>
-                <tr><th>Service</th><th class="align-right">Starting At</th></tr>
-                <tr><td>Wedding Day Bridal</td><td class="price">$150</td></tr>
-                <tr><td>Special Occasion</td><td class="price">$75</td></tr>
-            </table>
-            <button class="book-btn">BOOK NOW</button>
-        </div>
-    </div>
-
-    <div class="service-block">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1522336572018-3b8f1738b4d2?auto=format&fit=crop&w=600&q=80"></div>
-        <div class="service-info">
-            <h2>BLOWOUT</h2>
-            <table>
-                <tr><th>Service</th><th class="align-right">Price</th></tr>
-                <tr><td>Brazilian Blowout</td><td class="price">$250</td></tr>
-                <tr><td>Keratin Smoothing Treatment</td><td class="price">$75</td></tr>
-            </table>
-            <button class="book-btn">BOOK NOW</button>
-        </div>
-    </div>
-
-</div>
 
 </body>
 </html>
